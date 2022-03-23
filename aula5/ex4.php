@@ -20,8 +20,11 @@
                 echo $n2 . ' ' . $n3 . ' ' . $n1;
             }
           
-    }else if($n1 > $n3)
+    }else if($n3 > $n2)
             {
+                if (condition) {
+                    echo $n2 . ' ' . $n1 . ' ' . $n3;
+                }
                 echo $n2 . ' ' . $n1 . ' ' . $n3;
             }else{
                 echo $n2 . ' ' . $n3 . ' ' . $n1;
