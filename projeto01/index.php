@@ -12,7 +12,7 @@
     <div id="menu"> 
     <ul>
         <li><a href="cadastro_usuario.html">Cadastrar Usuário</a></li>
-        <li><a href="listar_usuario.php">Listar Usuário</a></li>
+        <li><a href="listar_usuarios.php">Listar Usuário</a></li>
     </ul>
     </div>
 </body>
