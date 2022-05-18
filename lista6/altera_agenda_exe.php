@@ -1,5 +1,5 @@
 <?php
-    include("conxeao.php");
+    include("conexao.php");
     $id_agenda = $_POST['id_agenda'];
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
@@ -13,18 +13,19 @@
     $dt_cadastro = date("Y-m-d");
 
     echo "Nome: $nome<br>";
+    
 
     $sql = "UPDATE agenda SET
-        $nome = 'nome',
-        $apelido = 'apelido',
-        $endereco = 'endereco',
-        $bairro = 'bairro',
-        $cidade = 'cidade',		
-        $estado = 'estado',	
-        $telefone = 'telefone',
-        $celular = 'celular',
-        $email = 'email',
-        $dt_cadastro = 'dt_cadastro,
+        nome= '".$nome."',
+        apelido = '".$apelido."',
+        endereco = '".$endereco."',
+        bairro = '".$bairro."',
+        cidade = '".$cidade."',		
+        estado = '".$estado."',	
+        telefone = '".$telefone."',
+        celular = '".$celular."',
+        email = '".$email."',
+        dt_cadastro = '".$dt_cadastro."'
         WHERE id_agenda = $id_agenda";
 
     $result = mysqli_query($con, $sql);

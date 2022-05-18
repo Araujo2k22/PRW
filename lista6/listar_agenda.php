@@ -33,7 +33,7 @@
             while ($row = mysqli_fetch_array($result)){
                 echo "<tr>";
                 echo "<td>" . $row['id_agenda'] . "</td>";
-                echo "<td>" . $row['nome'] . "</td>";
+                echo "<td><a href='altera_agenda.php?id_agenda=".$row['id_agenda']."'>".$row['nome']. "</a></td>";
                 echo "<td>" . $row['apelido'] . "</td>";
                 echo "<td>" . $row['endereco'] . "</td>";
                 echo "<td>" . $row['bairro'] . "</td>";
