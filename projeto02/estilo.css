@@ -39,10 +39,10 @@ h1{
     float: right;
 }
 #btn:hover{
-    background-color: rgb(118, 212, 197);
+    background-color: rgb(76, 0, 255);
 }
 h1 {
-    background-color: brown;
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 
