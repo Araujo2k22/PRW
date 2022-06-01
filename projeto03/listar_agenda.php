@@ -18,6 +18,7 @@
     <table align="center" border="1" width=500>
         <tr>
             <th>Código</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>Apelido</th>
             <th>Endereço</th>
@@ -28,6 +29,7 @@
             <th>Celular</th>
             <th>E-mail</th>
             <th>Data</th>
+            <th>Excluir</th>
         </tr>
         <?php
             while ($row = mysqli_fetch_array($result)){
