@@ -37,8 +37,7 @@
     echo "Email: " . $email . "<br>";
 	
 	$sql = "INSERT INTO agenda (nome,apelido,endereco,bairro,cidade,estado,telefone,celular,email,foto_blob, foto_nome) 
-	        VALUES ('".$nome."','".$apelido."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$telefone."',
-            '".$celular."','".$email."','".$fotoBlob."','".$fotoNome."')";
+	        VALUES ('".$nome."','".$apelido."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$telefone."','".$celular."','".$email."','".$fotoBlob."','".$fotoNome."')";
 	    
 	$result = mysqli_query($con, $sql);
 	if($result)

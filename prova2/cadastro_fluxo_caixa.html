@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de contatos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Cadastro de Fluxo de Caixa</h1>
+    <div id="teste">
+        <form method="post" action="cadastro_fluxo_caixa.php" enctype='multipart/form-data'>
+            <fieldset>
+                <legend>Cadastro</legend>
+                <div class="form-item">
+                    <label for="Historico">Histórico:</label>
+                    <input type="text" id="Histórico" name="Histórico" placeholder="Digite o historico">
+                </div>
+                <label for="tipo">Tipo:</label>
+                <input type="radio" id="Tipo" name="Tipo" value="entrada">Entrada
+                <input type="radio" id="Tipo" name="Tipo" value="saida">Saida
+                <div class="form-item">
+                    <label for="telefone">Valor:</label>
+                    <input type="text" id="valor" name="valor" placeholder="Digite o valor">
+                </div>
+                <div class="form-item">
+                    <input id="btn" type="submit" value="Enviar" >
+                    <a href='index.php'> Voltar</a>
+                </div>
+                <select name="Cheque" id="Cheque">
+                    <option value="Sim">Sim</option>
+                    <option value="Sim">Não</option>
+                </select>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
