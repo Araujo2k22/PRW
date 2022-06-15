@@ -1,6 +1,6 @@
 <?php
     include('conexao.php');
-    $sql = 'SELECT * FROM Fluxo';
+    $sql = 'SELECT * FROM fluxo_caixa';
     $result = mysqli_query($con, $sql);
 ?>
 
@@ -22,18 +22,18 @@
             <th>Tipo</th>
             <th>Valor</th>
             <th>Histórico</th>
+            <th>Cheque</th>
             <th>Excluir</th>
         </tr>
         <?php
             while ($row = mysqli_fetch_array($result)){
                 echo "<tr>";
                 echo "<td>" . $row['id_fluxo'] . "</td>";
-                echo "<td>" . $row['dt_cadastro'] . "</td>";
-                echo "<td><a href='altera_fluxo_caixa.php?id_fluxo=".$row['id_fluxo']."'>".$row['Historico']. "</a></td>";
-                echo "<td>" . $row['Tipo'] . "</td>";
-                echo "<td>" . $row['Valor'] . "</td>";
-                echo "<td>" . $row['cidade'] . "</td>";
-                echo "<td>" . $row['estado'] . "</td>";
+                echo "<td>" . $row['data'] . "</td>";
+                echo "<td>" . $row['tipo'] . "</td>";
+                echo "<td>" . $row['valor'] . "</td>";
+                echo "<td>" . $row['historico'] . "</td>";
+                echo "<td>" . $row['cheque'] . "</td>";
                 echo "<td><a href='excluir_fluxo_caixa.php?id_fluxo=".$row['id_fluxo']."'>Excluir</a></td>";
                 echo "</tr>";
             }

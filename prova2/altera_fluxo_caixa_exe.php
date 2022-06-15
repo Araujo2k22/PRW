@@ -3,32 +3,27 @@
 
     $id_fluxo = $_POST['id_fluxo'];
     $dt_cadastro = date("Y-m-d");
-    $nome = $_POST['nome'];
+    $tipo = $_POST['Tipo'];
     $valor = $_POST['Valor'];	
-    $cheque = $_POST['Cheque'];	
+    $historico = $_POST['Historico'];	
+    $cheque = $_POST['Cheque'];
     
-
-    echo "Nome: $nome<br>";
-    
+    echo "<h1>Alteração do Fluxo de Caixa</h1>";
 
     $sql = "UPDATE fluxo SET
-        dt_cadastro = '".$dt_cadastro."',
-        apelido = '".$apelido."',
-        endereco = '".$endereco."',
-        bairro = '".$bairro."',
-        cidade = '".$cidade."',		
-        estado = '".$estado."',	
-        telefone = '".$telefone."',
-        celular = '".$celular."',
-        email = '".$email."',
-        foto_blob='".$fotoBlob."',
-        foto_nome='".$fotoNome."'
-        WHERE id_agenda = $id_fluxo";
+        data='".$dt_cadastro."',
+        tipo='".$tipo."',
+        valor='".$valor."',
+        historico='".$hisotrico."',
+        cheque='".$cheque."'
+        WHERE id_fluxo =". $id_fluxo;
 
     $result = mysqli_query($con, $sql);
+
     if ($result) {
-        echo "<br><br>Dados alterados com sucesso";
+        echo "Dados alterados com sucesso<br>";
     } else {
-        echo "<br><br>Dados não alterados: ".mysqli_error($con);
+        echo "Dados não alterados: ".mysqli_error($con)."<br>";
     }
 ?>
+<br><a href="index.php">Voltar</a>

@@ -1,7 +1,7 @@
 <?php
     include("conexao.php");
-    $id_fluxo = $_GET["id_fluxo"];
-    $sql = "SELECT * FROM fluxo WHERE id_fluxo='$id_fluxo'";
+    $id_fluxo = $_GET['id_fluxo'];
+    $sql = 'SELECT * FROM fluxo WHERE id_fluxo='.$id_fluxo;
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -16,33 +16,35 @@
 <form action="altera_fluxo_exe.php" method="post" enctype='multipart/form-data'>
         <table align="center">
             <tr>
-                <th colspan="2">Cadastro de Fluxo de Caixa</th>
+                <th colspan="2">Cadastro Fluxo de Caixa</th>
             </tr>
             <tr>
                 <td>
-                    <p>Histórico:</p>
+                    <p>Data:</p>
                 </td>
-                <td><input type="text" name="historico" value="<?php echo $row['historico'] ?>"></td>
+                <td><input type="text" name="Data" value="<?php echo $row['Data'] ?>"></td>
             </tr>
             <tr>
                 <td>
-                    <p>Apelido:</p>
+                    <p>Tipo:</p>
                 </td>
-                <td><input type="text" name="apelido" value="<?php echo $row['apelido'] ?>"></td>
+                <td><input type="text" name="Tipo" value="<?php echo $row['Tipo'] ?>"></td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <hr>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Telefone:</p>
+                    <p>Valor:</p>
                 </td>
-                <td><input type="text" name="telefone" value="<?php echo $row['telefone'] ?>"></td>
+                <td><input type="text" name="Valor" value="<?php echo $row['Valor'] ?>"></td>
+                <td>
+                    <p>Historico:</p>
+                </td>
+                <td><input type="text" name="Historico" value="<?php echo $row['Historico'] ?>"></td>
             <tr>
                 <td colspan="2">
-                    <hr>
                 </td>
             </tr>
             <tr>

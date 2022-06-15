@@ -14,24 +14,29 @@
             <fieldset>
                 <legend>Cadastro</legend>
                 <div class="form-item">
-                    <label for="Historico">Histórico:</label>
-                    <input type="text" id="Histórico" name="Histórico" placeholder="Digite o historico">
+                    <label for="Data">Data:</label>
+                    <input type="date" id="Data" name="Data">
                 </div>
                 <label for="tipo">Tipo:</label>
                 <input type="radio" id="Tipo" name="Tipo" value="entrada">Entrada
                 <input type="radio" id="Tipo" name="Tipo" value="saida">Saida
                 <div class="form-item">
-                    <label for="telefone">Valor:</label>
-                    <input type="text" id="valor" name="valor" placeholder="Digite o valor">
+                    <label for="Valor">Valor:</label>
+                    <input type="text" id="Valor" name="Valor" placeholder="Digite o valor">
+                </div>
+                <div class="form-item">
+                    <label for="Historico">Histórico:</label>
+                    <input type="text" id="Historico" name="Historico" placeholder="Digite o histórico">
+                </div>
+                <div>
+                <label for="Cheque">Cheque:</label>
+                <select name="Cheque" id="Cheque">
+                <option value="Sim">Sim</option>
+                <option value="Sim">Não</option>
                 </div>
                 <div class="form-item">
                     <input id="btn" type="submit" value="Enviar" >
                     <a href='index.php'> Voltar</a>
-                </div>
-                <select name="Cheque" id="Cheque">
-                    <option value="Sim">Sim</option>
-                    <option value="Sim">Não</option>
-                </select>
                 </div>
             </fieldset>
         </form>

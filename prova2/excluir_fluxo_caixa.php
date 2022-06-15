@@ -3,7 +3,7 @@
     
 	$id_fluxo = $_GET['id_fluxo'];
 
-    $sql = 'DELETE FROM fluxo WHERE id_fluxo='.$id_fluxo;
+    $sql = 'DELETE FROM fluxo_caixa WHERE id_fluxo='.$id_fluxo;
     
 	echo "<h1> Exclusão de Consultas </h1>";
 	$result = mysqli_query($con, $sql);
